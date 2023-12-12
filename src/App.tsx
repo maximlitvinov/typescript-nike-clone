@@ -1,17 +1,43 @@
-import { Hero, PopularProducts, Subscribe, SpecialOffer, SuperQuality, CustomerReviews, Footer, Services } from "./sections";
+import {
+  Hero,
+  PopularProducts,
+  Subscribe,
+  SpecialOffer,
+  SuperQuality,
+  CustomerReviews,
+  Footer,
+  Services,
+} from "./sections";
+import Nav from "./components/Nav";
 
 const App = () => {
   return (
-    <main className="text-center">
-      Nav
-      <section className="my-2">Hero</section>
-      <section className="my-24">PopularProducts</section>
-      <section className="my-24">SuperQuality</section>
-      <section className="my-24">Services</section>
-      <section className="my-24">SpecialOffer</section>
-      <section className="my-24">CustomerReviews</section>
-      <section className="my-24">Subscribe</section>
-      <section className="my-24">Footer</section>
+    <main className="relative">
+      <Nav />
+      <section className="xl: padding-1 wide:padding-r padding-b">
+        <Hero />
+      </section>
+      <section className="padding">
+        <PopularProducts />
+      </section>
+      <section className="padding">
+        <SuperQuality />
+      </section>
+      <section className="padding-x py-10">
+        <Services />
+      </section>
+      <section className="padding">
+        <SpecialOffer />
+      </section>
+      <section className="bg-pale-blue padding">
+        <CustomerReviews />
+      </section>
+      <section className="padding-x sm:py-24 py-16 w-full">
+        <Subscribe />
+      </section>
+      <section className="bg-black padding-x padding-t pb-8 text-white">
+        <Footer />
+      </section>
     </main>
   );
 };
